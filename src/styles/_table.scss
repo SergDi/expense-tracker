@@ -23,6 +23,7 @@ button {
             align-items: center;
 
             .actions {
+                visibility: hidden;
                 display: flex;
 
                 svg-icon {
@@ -34,6 +35,14 @@ button {
             .header {
                 text-transform: capitalize;
             }
+        }
+
+        &:hover {
+            .table-cell { 
+                .actions {
+                    visibility: visible;
+                }
+            } 
         }
     }
     
