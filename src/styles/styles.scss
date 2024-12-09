@@ -1,0 +1,110 @@
+/* You can add global styles to this file, and also import other style files */
+@use "@ng-select/ng-select/themes/default.theme.css";
+@use '_resets';
+@use 'index';
+@use '_date-picker';
+@use '_forms';
+@use '_modal';
+@use '_table';
+
+html {
+    font-size: 14px;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    background-color: index.$flash-white;
+}
+
+h1 {
+    color: index.$black-100;
+    margin: 0 0 20px;
+    font-size: 50px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 60px;
+}
+
+h2 {
+    color: index.$black-100;
+    margin: 0;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 42px;
+}
+
+h3 {
+    color: index.$black-100;
+    margin: 0;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 32px;
+}
+
+app-root {
+    display: flex;
+
+    main {
+        padding: 40px;
+        height: 100vh;
+    }
+}
+
+svg-icon {
+    display: flex;
+    width: 24px;
+    height: 24px;
+    fill: index.$black-100;
+}
+
+article {
+
+    .header {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        padding: 8px 0;
+
+        .counter {
+            color: index.$light-brown;
+        }
+
+        .add {
+            border-radius: index.$border-radius;;
+            background: index.$orange;
+
+            display: flex;
+            width: 187px;
+            height: 42px;
+            padding: 10px 0px;
+            justify-content: center;
+            align-items: center;
+            gap: 8px;
+
+            color: index.$white;
+            fill: index.$white;
+        }
+    }
+}
+
+
+.dropdown-menu {
+    min-width: 160px;
+    width: 100%;
+    background-color: index.$white;
+    box-shadow: 0px -2px 2px -2px rgba(50, 72, 93, 0.35), 0px 3px 7px -3px rgba(0, 0, 0, 0.3), 0px 6px 12px -2px rgba(50, 72, 93, 0.25);
+    border-radius: 8px;
+
+    transition: opacity 1s ease-in-out;
+
+    max-height: 240px;
+    overflow: auto;
+
+    padding: 0;
+
+}
+

@@ -1,0 +1,38 @@
+@use 'index';
+
+.form-group {
+    padding-bottom: 16px;
+    label {
+        display: block;
+        margin-bottom: 4px;
+        cursor: pointer;
+    }
+
+    .error {
+        color: index.$alert;
+    }
+}
+
+select,
+input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid index.$light-grey;
+}
+
+button,
+input[type="button"] {
+    border-radius: index.$border-radius;;
+    border: 1px solid transparent;
+    position: relative;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+
+.ng-select .ng-select-container {
+    border-radius: 8px;
+    min-height: 42px;
+    border: 1px solid index.$light-grey;
+}

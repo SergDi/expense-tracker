@@ -1,0 +1,46 @@
+@use 'index';
+
+// Overlay backdrop styling
+.overlay-backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal {
+  background: #fff;
+  border-radius: index.$border-radius;;
+  min-width: 400px;
+
+  header {
+      padding: 24px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+  }
+  .modal-body {
+      padding: 0 24px;
+  }
+  footer {
+      padding: 24px;
+      display: flex;
+      justify-content: flex-end;
+
+      button {
+        border-radius: index.$border-radius;;
+        width: 120px;
+        height: 42px;
+        padding: 10px 0px;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 8px;
+
+        &.add {
+            border-radius: index.$border-radius;;
+            background: index.$orange;
+            color: index.$white;
+            fill: index.$white;
+        }
+      }
+  }
+}
