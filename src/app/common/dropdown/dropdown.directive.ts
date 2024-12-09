@@ -40,7 +40,7 @@ export class DropdownDirective implements OnInit, OnDestroy {
 
     merge(...sources).subscribe(() => this.toggleDropdown());
 
-    this.dropdownPanel.updatePosition.subscribe(_=> this.updateDropdownPosition());
+    this.dropdownPanel.updatePosition.subscribe(() => this.updateDropdownPosition());
   }
 
   ngOnDestroy(): void {
@@ -51,7 +51,7 @@ export class DropdownDirective implements OnInit, OnDestroy {
   }
 
   toggleDropdown(): void {
-    this.isDropdownOpen ? this.destroyDropdown() : this.openDropdown();
+    return this.isDropdownOpen ? this.destroyDropdown() : this.openDropdown();
   }
 
   private openDropdown() {
@@ -90,7 +90,7 @@ export class DropdownDirective implements OnInit, OnDestroy {
   }
 
   private updateDropdownPosition() {
-    setTimeout((_: any)=> this.overlayRef.updatePosition());
+    setTimeout(()=> this.overlayRef.updatePosition());
   }
 
   private getOverlayPosition(element: HTMLInputElement, positionType: PositionTypeEnum,  offsetX: number, offsetY: number) {

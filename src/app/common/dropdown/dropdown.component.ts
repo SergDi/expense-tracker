@@ -18,7 +18,7 @@ import { NgClass } from '@angular/common';
 })
 export class DropdownComponent implements IDropdownPanel {
 
-  @ViewChild(TemplateRef) templateRef!: TemplateRef<any>;
+  @ViewChild(TemplateRef) templateRef!: TemplateRef<object>;
 
   @Output() opened = new EventEmitter();
   @Output() closed = new EventEmitter();

@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, inject, Signal, signal, TemplateRef, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, signal, TemplateRef, ViewChild } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { NgSelectComponent } from '@ng-select/ng-select';
 import { Transaction, TransactionType } from '../../domain/entities/transaction';
