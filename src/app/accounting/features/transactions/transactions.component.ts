@@ -38,19 +38,6 @@ export function initType(transaction: Transaction, key: string) {
     template: `
     <h1>Finances</h1>
     <balance-widget [balance]="balance()" [income]="income()" [expense]="expense()"/>
-
-    <!-- <article>  
-        <h3>Filters</h3>
-        <section>
-            <label>Type</label>
-            <ng-select [ngModel]="filterType()" (ngModelChange)="onFilterType($event)" [items]="types"></ng-select>
-        </section>
-        <section>
-            <label>Category</label>
-            <ng-select [ngModel]="filterCategory()" (ngModelChange)="onFilterCategory($event)" [items]="categories()" bindLabel="name" bindValue="id"></ng-select>
-        </section>
-    </article> -->
-
     <article>
         <div class="header">
             <div class="counter">{{transactionsFilteredLength()}} of {{transactionsLength()}} Transactions</div>
