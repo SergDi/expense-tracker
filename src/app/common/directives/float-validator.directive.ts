@@ -2,7 +2,8 @@ import { Directive } from '@angular/core';
 import { AbstractControl, NG_VALIDATORS, ValidationErrors, Validator } from '@angular/forms';
 
 export const options = {
-    decimalSeparator: (1.1).toLocaleString().substring(1, 2)
+    decimalSeparator: (1.1).toLocaleString().substring(1, 2),
+    defaultSeparator: '.'
 };
 
 @Directive({
@@ -23,11 +24,10 @@ export class FloatValidatorDirective implements Validator {
         if (!value) {
             return true;
         }
-        return new RegExp('^-?[0-9]\\d*(\\' + options.decimalSeparator + '\\d+)?$').test(value) && !isNaN(parseFloat(value));
+        return new RegExp('^-?[0-9]\\d*(\\' + options.defaultSeparator + '\\d+)?$').test(value) && !isNaN(parseFloat(value));
     }
 
     const value = control.value;
-    console.log('FloatValidatorDirective ', value)
     if (!float(value)) {
       return { floatError: true };
     }
