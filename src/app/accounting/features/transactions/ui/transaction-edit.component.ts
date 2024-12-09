@@ -30,7 +30,7 @@ import { FloatValidatorDirective } from '../../../../common/directives/float-val
                 </div>
                 <div class="form-group">
                     <label>Amount</label>
-                    <input [(ngModel)]="model.amount" name="amount" placeholder="Amount" required floatValidator/>
+                    <input [(ngModel)]="model.amount" name="amount" placeholder="Amount" type="number" step="0.01" required floatValidator/>
                     @if(form.hasError('required', ['amount']) && form.submitted) {
                         <small class="error">Please enter Amount.</small>
                     }
